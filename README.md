@@ -6,7 +6,7 @@ A Go worker captures frames at regular intervals using `ffmpeg`. Then ImageMagic
 
 Optionally, a Go worker can be setup to automatically upload the frames to a remote server. Frames are copied using either `scp` or `rsync`, depending on what's available. Finally, another worker runs at regular intervals to clean up both the local and remote directory (by default, frames are kept for up to 7 days).
 
-Normally, the program captures one frame per second. However, when motion is detected, a "burst mode" is activated, in which case frames will be captured as fast as possible for the next 10 seconds, or for as long as motion is being detected.
+Normally, the program captures one frame per second. However when motion is detected, a "burst mode" is activated, in which case frames will be captured as fast as possible for the next 10 seconds or for as long as motion is being detected.
 
 ## Installation
 
